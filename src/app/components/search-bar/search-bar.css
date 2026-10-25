@@ -1,0 +1,72 @@
+/* ===== Barre de recherche ===== */
+.container {
+  margin: 30px auto;          /* centre la barre horizontalement */
+  padding: 10px 20px;
+  width: 300px;               /* largeur fixe : plus simple que 30% */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;        /* aligne l'input et l'icône au milieu */
+  border: 1px solid rgb(185, 200, 163);
+  border-radius: 30px;
+}
+
+input {
+  all: unset;
+  font-weight: bold;
+  width: 100%;                /* l'input prend toute la place disponible */
+}
+
+fa-icon {
+  cursor: pointer;
+}
+
+label {
+  color: rgb(1, 107, 72);
+  font-weight: bold;
+}
+
+/* ===== Liste des voitures ===== */
+.cars-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;            /* passe à la ligne quand il n'y a plus de place */
+  gap: 25px;                  /* espace entre les cartes */
+  padding: 20px;
+}
+
+/* ===== Une carte voiture ===== */
+.auto-card {
+  width: 260px;               /* taille fixe : toutes les cartes sont identiques */
+  padding: 15px;
+  border: 2px solid rgb(1, 107, 72);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);   /* ombre douce */
+  text-align: center;
+  transition: transform 0.2s;                    /* animation fluide */
+}
+
+.auto-card:hover {
+  transform: translateY(-5px);   /* la carte monte un peu au survol */
+}
+
+.auto-card img {
+  width: 100%;                /* l'image remplit la carte */
+  height: 150px;
+  object-fit: cover;          /* évite que l'image soit déformée */
+  border-radius: 10px;
+}
+
+/* ===== Bouton ===== */
+button {
+  all: unset;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(1, 107, 72);
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(0, 80, 54);   /* vert plus foncé au survol */
+}
